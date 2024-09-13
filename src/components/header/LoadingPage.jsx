@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import PropTypes from 'prop-types';
 
 function LoadingPage({ onLoadingComplete }) {
   const counterRef = useRef(null);
@@ -34,5 +35,9 @@ function LoadingPage({ onLoadingComplete }) {
     </div>
   );
 }
+
+LoadingPage.propTypes = {
+  onLoadingComplete: PropTypes.func.isRequired,
+};
 
 export default LoadingPage;
